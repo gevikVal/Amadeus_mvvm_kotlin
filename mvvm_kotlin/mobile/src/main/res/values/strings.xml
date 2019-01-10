@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">mvvm_kotlin</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="api_key">BH0YcvY52j0ee98eMLf9YMoHUjzzqZTi</string>
 </resources>

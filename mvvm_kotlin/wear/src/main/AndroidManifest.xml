@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gevikvalijani.mvvm_kotlin">
+    package="com.example.gevikvalijani.presenter">
 
     <uses-feature android:name="android.hardware.type.watch" />
 
@@ -19,12 +19,12 @@
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-        <meta-data
+        <meta-com.example.gevikvalijani.data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.gevikvalijani.presenter.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

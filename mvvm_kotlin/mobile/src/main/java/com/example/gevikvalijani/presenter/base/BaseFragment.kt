@@ -1,10 +1,8 @@
-package com.example.gevikvalijani.mvvm_kotlin.base
+package com.example.gevikvalijani.presenter.base
 
-import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
-import android.support.v4.app.AppComponentFactory
 import android.support.v4.app.Fragment
-import com.example.gevikvalijani.mvvm_kotlin.di.Injectable
+import com.example.gevikvalijani.presenter.di.Injectable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import javax.inject.Inject

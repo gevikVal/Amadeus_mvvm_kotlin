@@ -1,6 +1,6 @@
 
 
-package com.example.gevikvalijani.mvvm_kotlin.di
+package com.example.gevikvalijani.presenter.di
 
 import android.arch.lifecycle.ViewModel
 import dagger.MapKey

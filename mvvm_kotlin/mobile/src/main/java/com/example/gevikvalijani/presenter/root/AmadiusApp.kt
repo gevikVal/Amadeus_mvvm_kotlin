@@ -1,8 +1,8 @@
-package com.example.gevikvalijani.mvvm_kotlin.root
+package com.example.gevikvalijani.presenter.root
 
 import android.app.Activity
 import android.app.Application
-import com.example.gevikvalijani.mvvm_kotlin.BuildConfig
+import com.example.gevikvalijani.presenter.BuildConfig
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -15,7 +15,7 @@ class AmadiusApp : Application() ,HasActivityInjector {
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     override fun activityInjector(): AndroidInjector<Activity> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return dispatchingAndroidInjector
     }
 
     override fun onCreate() {
@@ -23,7 +23,7 @@ class AmadiusApp : Application() ,HasActivityInjector {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
-
-        AppInjector.init(this)
+     //   getComponent().inject(this)
     }
+
 }

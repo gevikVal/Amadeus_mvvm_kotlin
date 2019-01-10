@@ -1,4 +1,4 @@
-package com.example.gevikvalijani.mvvm_kotlin;
+package com.example.gevikvalijani.presenter;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

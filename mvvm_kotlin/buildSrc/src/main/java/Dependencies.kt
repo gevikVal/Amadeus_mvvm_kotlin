@@ -13,8 +13,8 @@
  */
 
 object Modules {
-    const val domain = ":domain"
-    const val data = ":data"
+    const val domain = ":com.example.gevikvalijani.domain"
+    const val data = ":com.example.gevikvalijani.data"
     const val iovcloud = ":iovcloud"
 }
 

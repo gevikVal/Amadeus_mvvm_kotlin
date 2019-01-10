@@ -1,4 +1,4 @@
-package com.example.gevikvalijani.mvvm_kotlin
+package com.example.gevikvalijani.presenter
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar

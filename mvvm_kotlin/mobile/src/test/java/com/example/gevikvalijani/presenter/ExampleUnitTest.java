@@ -1,4 +1,4 @@
-package com.example.gevikvalijani.mvvm_kotlin;
+package com.example.gevikvalijani.presenter;
 
 import org.junit.Test;
 
