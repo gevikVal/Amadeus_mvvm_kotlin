@@ -2,6 +2,7 @@ package com.example.gevikvalijani.presenter.di
 
 import android.app.Application
 import com.example.gevikvalijani.data.network.AuthorizedNetworkInterceptor
+import com.example.gevikvalijani.data.network.CarHubService
 import dagger.Provides
 import okhttp3.Cache
 import okhttp3.OkHttpClient
@@ -41,7 +42,7 @@ class NetworkModule {
     }
 
     @Provides
-    fun porvideOkHttpCliend(cache: Cache, authorizedNetworkInterceptor: AuthorizedNetworkInterceptor, httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun porvideOkHttpClient(cache: Cache, authorizedNetworkInterceptor: AuthorizedNetworkInterceptor, httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         val okHttpClientBuilder = OkHttpClient.Builder()
         okHttpClientBuilder.cache(cache)
         okHttpClientBuilder.connectTimeout(TIMEOUT, TimeUnit.SECONDS)
