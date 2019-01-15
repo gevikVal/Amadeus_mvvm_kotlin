@@ -1,8 +1,9 @@
-package com.example.gevikvalijani.presenter.di
+package com.example.gevikvalijani.presenter.di.module
 
 import android.app.Application
 import com.example.gevikvalijani.data.network.AuthorizedNetworkInterceptor
 import com.example.gevikvalijani.data.network.CarHubService
+import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
 import okhttp3.OkHttpClient
@@ -13,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import timber.log.Timber
 import java.io.File
 import java.util.concurrent.TimeUnit
-
+@Module
 class NetworkModule {
     companion object {
         private const val TIMEOUT = 10L // 10s
@@ -64,6 +65,10 @@ class NetworkModule {
                 .baseUrl(CarHubService.BASE_URL)
                 .client(okHttpClient)
                 .build()
+    }
+    @Provides
+    fun provideCarHubService(retrofit: Retrofit): CarHubService {
+        return retrofit.create(CarHubService::class.java)
     }
 
 }

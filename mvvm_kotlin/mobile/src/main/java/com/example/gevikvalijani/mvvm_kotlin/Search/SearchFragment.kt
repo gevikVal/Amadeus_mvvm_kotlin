@@ -8,7 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.example.gevikvalijani.mvvm_kotlin.R
+
+import com.example.gevikvalijani.presenter.R
 import com.google.android.gms.plus.PlusOneButton
 
 /**
