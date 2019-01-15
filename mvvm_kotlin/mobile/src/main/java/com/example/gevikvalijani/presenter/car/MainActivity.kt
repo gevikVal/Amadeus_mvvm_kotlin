@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main2.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject lateinit var carUseCase: CarUseCase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +23,7 @@ class MainActivity : AppCompatActivity() {
 
        // carUseCase.getCars()
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        fab.setOnClickListener { carUseCase.getCars()
         }
     }
 

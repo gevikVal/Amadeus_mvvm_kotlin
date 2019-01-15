@@ -1,5 +1,6 @@
 package com.example.gevikvalijani.domain.usecases
 
+import android.util.Log
 import com.example.gevikvalijani.data.repositories.car.CarDataSourceContract
 import com.example.gevikvalijani.data.response.Response
 import io.reactivex.Observer
@@ -20,10 +21,12 @@ class CarUseCase @Inject constructor(var carRepository: CarDataSourceContract.Ca
                 .subscribeWith(object : DisposableSingleObserver<Response>() {
                     override fun onSuccess(moviesDomainModel: Response) {
                         //                        EventBus.getDefault().post(new MessageEvent(200, "success"));
+                        Log.i("gevik","success")
                     }
 
                     override fun onError(throwable: Throwable) {
                         //                    EventBus.getDefault().post(new MessageEvent(500, "Error"));
+                        Log.i("gevik","fail")
                     }
                 })
     }
