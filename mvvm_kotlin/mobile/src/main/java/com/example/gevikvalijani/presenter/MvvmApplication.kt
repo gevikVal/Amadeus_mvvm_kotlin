@@ -3,6 +3,8 @@ package com.example.gevikvalijani.presenter
 import android.app.Activity
 import com.example.gevikvalijani.presenter.di.component.ApplicationComponent
 import com.example.gevikvalijani.presenter.di.component.DaggerApplicationComponent
+import com.example.gevikvalijani.presenter.di.module.ActivityModule
+import com.example.gevikvalijani.presenter.di.module.AndroidModule
 
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -16,6 +18,7 @@ class MvvmApplication : android.app.Application(),HasActivityInjector
     override fun onCreate() {
         super.onCreate()
         getComponent().inject(this)
+      //  getComponent().inject(app)
     }
 
     override fun activityInjector(): AndroidInjector<Activity> {
@@ -23,6 +26,7 @@ class MvvmApplication : android.app.Application(),HasActivityInjector
     }
 
     open fun getComponent(): ApplicationComponent {
-        return DaggerApplicationComponent.create()
+       return DaggerApplicationComponent.create()
     }
+
 }

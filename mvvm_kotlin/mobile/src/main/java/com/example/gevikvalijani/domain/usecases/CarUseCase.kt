@@ -1,5 +1,6 @@
 package com.example.gevikvalijani.domain.usecases
 
+import android.content.Context
 import android.util.Log
 import com.example.gevikvalijani.data.repositories.car.CarDataSourceContract
 import com.example.gevikvalijani.data.response.Response
@@ -15,6 +16,7 @@ import javax.inject.Inject
 class CarUseCase @Inject constructor(var carRepository: CarDataSourceContract.CarRepository) {
 
     fun getCars() {
+      //  context.assets
         val disposable = carRepository.getCars(35.1504, -114.57632, 15, "2019-06-7", "2019-06-10")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
