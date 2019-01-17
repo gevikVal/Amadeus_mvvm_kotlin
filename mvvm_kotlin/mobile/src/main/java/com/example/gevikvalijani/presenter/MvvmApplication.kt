@@ -3,8 +3,9 @@ package com.example.gevikvalijani.presenter
 import android.app.Activity
 import com.example.gevikvalijani.presenter.di.component.ApplicationComponent
 import com.example.gevikvalijani.presenter.di.component.DaggerApplicationComponent
-import com.example.gevikvalijani.presenter.di.module.ActivityModule
-import com.example.gevikvalijani.presenter.di.module.AndroidModule
+
+import com.example.gevikvalijani.presenter.di.module.MainModule
+
 
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -26,7 +27,13 @@ class MvvmApplication : android.app.Application(),HasActivityInjector
     }
 
     open fun getComponent(): ApplicationComponent {
-       return DaggerApplicationComponent.create()
+
+      //  return DaggerApplicationComponent.create()
+        return DaggerApplicationComponent
+                .builder()
+                .mainModule(MainModule(this))
+                .build()
+
     }
 
 }
